@@ -18,6 +18,9 @@ void fire();
 void useript();
 void waterhose();
 void loop();
+void fireEvnent();
+void treePlant();
+void mloop();
 int main(){
 srand((time(NULL)));
 tree();
@@ -34,8 +37,11 @@ fire();
 useript();
 
 waterhose();
-
-
+rnd=rand()%2+1;
+if(rnd==1){
+fireEvnent();
+if(rnd==500){printf("해고입니다\n");break;}
+treePlant();}
 if (ipt==1 && cnt%2==0){
 firetank();}
 
@@ -180,19 +186,39 @@ tarr[i][k]='*';
 printf("\n");}
 loop();
 
-
-
-
-
-
-
-
-
 //print();
 
 
 }
 }
+
+
+void fireEvnent(){
+	
+	
+	rnd=rand()%10+1;
+rrnd=rand()%500+1;
+if(rnd==1||rnd==2||rnd==3||rnd==4||rnd==5||rnd==6||rnd==7||rnd==8||rnd==9){
+printf("불이야이벤트발생!!\n");
+for(int i=0;i<1;i++){
+for(int k=0;k<rrnd;k++){
+tarr[i][k]='*';
+}
+printf("\n");}
+
+
+mloop();
+	
+	
+	
+	
+	
+	
+	}}
+
+
+
+
 
 
 
@@ -255,7 +281,26 @@ loop();
 //print();
 }}
 
-
+void treePlant(){
+	
+	rnd=rand()%10+1;
+rrnd=rand()%200+1;
+if(rnd==1||rnd==2||rnd==3){
+printf("나무심기운동.\n");
+for(int i=0;i<1;i++){
+if(tarr[2][99]=='*'){for(int i=3;i<4;i++){
+for(int k=0;k<rrnd;k++){
+tarr[i][k]='*';
+}
+}
+}
+printf("\n");}
+loop();
+//print();
+}
+	
+	
+	}
 
 
 
@@ -265,6 +310,7 @@ rnd=rand()%100+1;
 rrnd=rand()%500+51;
 if(rnd==5){
 printf("메테오가 발동됨니다.\n");
+printf("메테오중얼중얼\n");
 for(int i=0;i<1;i++){
 if(tarr[2][99]=='*'){for(int i=4;i<5;i++){
 for(int k=0;k<rrnd;k++){
@@ -280,6 +326,51 @@ loop();
 
 
 }
+
+void mloop(){
+	
+	
+	for(int i=0;i<1;i++){
+for(int k=0;k<rrnd;k++){
+tarr[i][k]='-';
+}
+printf("\n");}
+if(tarr[0][100]=='-'){
+for(int i=1;i<2;i++){
+for(int k=0;k<rrnd;k++){
+tarr[i][k]='-';
+}
+printf("\n");}}
+if(tarr[1][100]=='-'){
+for(int i=2;i<3;i++){
+for(int k=0;k<rrnd;k++){
+tarr[i][k]='*';
+}
+printf("\n");}}
+if(tarr[2][100]=='-'){
+for(int i=3;i<4;i++){
+for(int k=0;k<rrnd;k++){
+tarr[i][k]='-';
+}
+printf("\n");}}
+if(tarr[3][100]=='-'){
+for(int i=4;i<5;i++){
+for(int k=0;k<rrnd;k++){
+tarr[i][k]='-';
+}
+printf("\n");}}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	}
+
 
 void loop(){
 	
