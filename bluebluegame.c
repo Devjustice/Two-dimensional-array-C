@@ -3,11 +3,13 @@
 #include<time.h>
 #include<unistd.h>
 #include<stdlib.h>
+
 char tarr[5][100];
 int rnd=0;
 int rrnd=0;
 int ipt=0;
 int cnt=0;
+
 void meteor();
 void  firetank();
 void tree();
@@ -28,40 +30,46 @@ tree();
 sleep(1);
 
 while(1){//total while start
-
+printf("별장\n");
 
 if(cnt<=1){
 fire();
 }
-
+printf("불이야\n");
 useript();
 
-waterhose();
-rnd=rand()%2+1;
-if(rnd==1){
-fireEvnent();
-if(rnd==500){printf("해고입니다\n");break;}
+
+rnd=rand()%10+1;
+rrnd=rand()%10+1;
+if(rnd==1||rnd==2||rnd==3||rnd==4||rnd==5||rnd==6||rnd==7){
 treePlant();}
-if (ipt==1 && cnt%2==0){
+
+if(rrnd==1||rrnd==2||rrnd==3){printf("불이야\n");fireEvnent();}
+
+if (ipt==0){printf("firehose\n");
+waterhose();}
+
+
+if (ipt==1 && cnt%2==0){printf("firehose\n");
 firetank();}
 
 
 
-if (ipt==2 && cnt%3==0){
+if (ipt==2 && cnt%3==0){printf("firetank\n");
 firecar();
 }
 
-if (ipt==3 && cnt%5==0){
+if (ipt==3 && cnt%5==0){printf("firecopter\n");
 firecopter();
 }
 
-if (ipt==4 && cnt%7==0){
+if (ipt==4 && cnt%7==0){printf("meteor\n");
 meteor();}
 
 cnt++;
 
 
-//if(tarr[5][100]='-')break;//end condition
+//if(cnt==9)printf("7 times end\n");break;//end condition
 system("clear");
 
 print();
@@ -163,6 +171,7 @@ print();
 }
 
 void useript(){
+printf("물호수는 1턴마다 사용가능 press 0\n");
 printf("소화전은 2턴마다 사용가능 press 1\n");
 printf("소방차은 3턴마다 사용가능 press 2\n");
 printf("소방핼기은 5턴마다 사용가능 press3\n");
@@ -187,7 +196,7 @@ printf("\n");}
 loop();
 
 //print();
-
+sleep(1);
 
 }
 }
@@ -198,6 +207,7 @@ void fireEvnent(){
 	
 	rnd=rand()%10+1;
 rrnd=rand()%500+1;
+printf("%d만큼 탔네요 ㅠ\n",rrnd);
 if(rnd==1||rnd==2||rnd==3||rnd==4||rnd==5||rnd==6||rnd==7||rnd==8||rnd==9){
 printf("불이야이벤트발생!!\n");
 for(int i=0;i<1;i++){
@@ -209,7 +219,7 @@ printf("\n");}
 
 mloop();
 	
-	
+sleep(1);	
 	
 	
 	
@@ -240,7 +250,7 @@ tarr[i][k]='*';
 printf("\n");}
 
 loop();
-
+sleep(1);
 //print();
 }}
 
@@ -260,7 +270,7 @@ tarr[i][k]='*';
 }
 }
 printf("\n");}
-loop();
+loop();sleep(1);
 //print();
 }}
 void firecopter(){
@@ -277,7 +287,7 @@ tarr[i][k]='*';
 }
 }
 printf("\n");}
-loop();
+loop();sleep(1);
 //print();
 }}
 
@@ -295,7 +305,7 @@ tarr[i][k]='*';
 }
 }
 printf("\n");}
-loop();
+loop();sleep(1);
 //print();
 }
 	
@@ -319,7 +329,7 @@ tarr[i][k]='*';
 }
 }
 printf("\n");}
-loop();
+loop();sleep(1);
 //print();
 }
 
@@ -405,7 +415,207 @@ tarr[i][k]='*';
 printf("\n");}}
 
 	
-	
+	​
+373
+        
+374
+        
+375
+        
+376
+        
+377
+        
+378
+        
+379
+        
+380
+        
+381
+        
+382
+        }
+383
+​
+384
+​
+385
+void loop(){
+386
+        
+387
+        for(int i=0;i<1;i++){
+388
+for(int k=0;k<rrnd;k++){
+389
+tarr[i][k]='*';
+390
+}
+391
+printf("\n");}
+392
+if(tarr[0][100]=='*'){
+393
+for(int i=1;i<2;i++){
+394
+for(int k=0;k<rrnd;k++){
+395
+tarr[i][k]='*';
+396
+}
+397
+printf("\n");}}
+398
+if(tarr[1][100]=='*'){
+399
+for(int i=2;i<3;i++){
+400
+for(int k=0;k<rrnd;k++){
+401
+tarr[i][k]='*';
+402
+}
+403
+printf("\n");}}
+404
+if(tarr[2][100]=='*'){
+405
+for(int i=3;i<4;i++){
+406
+for(int k=0;k<rrnd;k++){
+407
+tarr[i][k]='*';
+408
+}
+409
+printf("\n");}}
+410
+if(tarr[3][100]=='*'){
+411
+for(int i=4;i<5;i++){
+412
+for(int k=0;k<rrnd;k++){
+413
+tarr[i][k]='*';
+414
+}
+415
+printf("\n");}}
+416
+​
+417
+        
+418
+        
+419
+        
+420
+        
+421
+        }
+422
+
 	
 	
 	}
+​
+373
+        
+374
+        
+375
+        
+376
+        
+377
+        
+378
+        
+379
+        
+380
+        
+381
+        
+382
+        }
+383
+​
+384
+​
+385
+void loop(){
+386
+        
+387
+        for(int i=0;i<1;i++){
+388
+for(int k=0;k<rrnd;k++){
+389
+tarr[i][k]='*';
+390
+}
+391
+printf("\n");}
+392
+if(tarr[0][100]=='*'){
+393
+for(int i=1;i<2;i++){
+394
+for(int k=0;k<rrnd;k++){
+395
+tarr[i][k]='*';
+396
+}
+397
+printf("\n");}}
+398
+if(tarr[1][100]=='*'){
+399
+for(int i=2;i<3;i++){
+400
+for(int k=0;k<rrnd;k++){
+401
+tarr[i][k]='*';
+402
+}
+403
+printf("\n");}}
+404
+if(tarr[2][100]=='*'){
+405
+for(int i=3;i<4;i++){
+406
+for(int k=0;k<rrnd;k++){
+407
+tarr[i][k]='*';
+408
+}
+409
+printf("\n");}}
+410
+if(tarr[3][100]=='*'){
+411
+for(int i=4;i<5;i++){
+412
+for(int k=0;k<rrnd;k++){
+413
+tarr[i][k]='*';
+414
+}
+415
+printf("\n");}}
+416
+​
+417
+        
+418
+        
+419
+        
+420
+        
+421
+        }
+422
